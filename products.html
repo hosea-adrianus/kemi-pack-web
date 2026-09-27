@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Catalog — Kemi Pack | Primary Packaging</title>
+  <meta name="description" content="Browse Kemi Pack primary packaging catalog for pharmaceutical, biotechnology, cosmetic, veterinary, and food industries. Filter by industry and material specifications.">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Kemi Pack Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="3" />
+            <line x1="10" y1="2" x2="14" y2="2" />
+            <line x1="6" y1="8" x2="18" y2="8" />
+            <circle cx="12" cy="14" r="2" fill="currentColor" />
+          </svg>
+        </div>
+        <span>KEMI<span>PACK</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="products.html" class="nav-link active">Products</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 0.5rem; text-align: center;">Request a Quote (RFQ)</a>
+  </div>
+
+  <main>
+    <!-- Catalog Header -->
+    <section class="section-sm" style="padding-top: calc(var(--header-height) + 3rem); border-bottom: 1px solid var(--slate-200);">
+      <div class="container">
+        <div style="max-width: 720px;">
+          <div class="hero-tag">PRODUCTS &amp; SPECIFICATIONS</div>
+          <h1 class="hero-title" style="font-size: clamp(2rem, 3.2vw, 2.7rem);">
+            Primary Packaging Catalog
+          </h1>
+          <p class="hero-desc">
+            Explore our standardized and cleanroom-ready primary packaging catalog. Filter by industry sector or search directly by material grade, container type, or reference SKU.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog Interactive Grid Section -->
+    <section class="section" style="background: var(--color-bg-light); min-height: 600px;">
+      <div class="container">
+        
+        <!-- Filter Toolbar -->
+        <div class="filter-toolbar">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+            <!-- Search Bar -->
+            <div style="position: relative; flex: 1; max-width: 380px; min-width: 260px;">
+              <input type="text" id="catalogSearchInput" class="form-control" placeholder="Search by name, material (Glass, PP), or SKU..." aria-label="Search packaging solutions">
+            </div>
+
+            <div style="font-size: 0.825rem; color: var(--slate-500);">
+              Complimentary lab evaluation samples available upon request
+            </div>
+          </div>
+
+          <!-- Filter Pills -->
+          <div class="filter-pills" role="tablist" aria-label="Industry filter">
+            <button class="filter-btn active" data-category="all">All Solutions</button>
+            <button class="filter-btn" data-category="pharma">Pharmaceutical</button>
+            <button class="filter-btn" data-category="biotech">Biotechnology</button>
+            <button class="filter-btn" data-category="cosmetic">Cosmetics &amp; Skincare</button>
+            <button class="filter-btn" data-category="vet">Veterinary Medicine</button>
+            <button class="filter-btn" data-category="food">Food &amp; Beverage</button>
+          </div>
+        </div>
+
+        <!-- Catalog Status Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--slate-500);">
+          <span id="catalogCount">Loading products...</span>
+          <span>Standards: USP &lt;660&gt;, EP 3.2.1, ISO 15378</span>
+        </div>
+
+        <!-- Catalog Cards Grid -->
+        <div class="showcase-grid" id="catalogGrid">
+          <!-- Dynamically filled by js/main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Mold CTA -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Need Custom Molds or Custom Finishes?</h2>
+          <p>
+            We accommodate custom mold development, specialized neck finishes, acid frosting, and precision printing tailored to your proprietary container designs.
+          </p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-accent btn-lg">Inquire Custom Tooling</a>
+            <a href="https://wa.me/6281234567890?text=Hello%20Kemi%20Pack,%20we%20would%20like%20to%20discuss%20custom%20mold%20tooling" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: #fff;">Talk with Sales Engineer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="productQuickModal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-image-col" id="modalProductImage"></div>
+        <div class="modal-info-col">
+          <h3 style="font-size: 1.4rem; color: var(--navy-950); margin-bottom: 0.25rem;" id="modalProductTitle"></h3>
+          <div style="font-size: 0.825rem; color: var(--slate-500); margin-bottom: 1rem;" id="modalProductSku"></div>
+          <p id="modalProductDesc" style="font-size: 0.9rem; color: var(--slate-600); line-height: 1.55; margin-bottom: 1.25rem;"></p>
+          
+          <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--navy-950); margin-bottom: 0.5rem;">Technical Specifications:</h4>
+          <div id="modalProductSpecs"></div>
+
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+            <a href="contact.html" id="modalRequestSampleBtn" class="btn btn-primary btn-sm">Request Sample</a>
+            <button class="btn btn-outline btn-sm" onclick="document.getElementById('productQuickModal').classList.remove('active'); document.body.style.overflow='';">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/6281234567890?text=Hello%20Kemi%20Pack,%20we%20would%20like%20to%20inquire%20about%20primary%20packaging%20solutions" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #ffffff; margin-bottom: 0.75rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+                <line x1="10" y1="2" x2="14" y2="2" />
+                <line x1="6" y1="8" x2="18" y2="8" />
+                <circle cx="12" cy="14" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <span>KEMI<span style="color: #60a5fa;">PACK</span></span>
+          </a>
+          <p style="font-size: 0.85rem; line-height: 1.6; max-width: 280px; margin-top: 0.5rem;">
+            <strong>PT Kemilau Gema Indopack (KGI Group)</strong> — Reliable solutions partner of primary packaging for pharmaceutical, biotechnology, cosmetic, veterinary, food, and beverages. Part of Kinas Global Indonusa (Est. 2007).
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=pharma">Pharmaceutical</a></li>
+            <li><a href="products.html?category=biotech">Biotechnology</a></li>
+            <li><a href="products.html?category=cosmetic">Cosmetics &amp; Skincare</a></li>
+            <li><a href="products.html?category=vet">Veterinary Medicine</a></li>
+            <li><a href="products.html?category=food">Food &amp; Beverages</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Kemilau Gema Indopack</a></li>
+            <li><a href="about.html#standards">KGI Group Heritage (2007)</a></li>
+            <li><a href="about.html">Vision &amp; Mission</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Request Samples</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Facility &amp; Sales</h4>
+          <ul class="footer-links">
+            <li>Kawasan Pergudangan Lio Baru Asri Blok AA3 - AA5, Batuceper, Kota Tangerang, Indonesia</li>
+            <li><a href="mailto:sales@kemipack.com">sales@kemipack.com</a></li>
+            <li>+62 21 8900 1234</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PT Kemilau Gema Indopack (KGI Group). All rights reserved.</div>
+        <div>Over 19 Years Raw Materials &amp; Primary Packaging Supplier</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
