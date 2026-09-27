@@ -1259,6 +1259,13 @@ textarea.form-control {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
+  min-height: 420px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-grid.is-transitioning {
+  opacity: 0.4;
+  transform: translateY(4px);
 }
 
 @media (max-width: 992px) {
@@ -1601,9 +1608,39 @@ textarea.form-control {
 
 @media (max-width: 768px) {
   .lightbox-nav {
-    display: none;
+    display: flex;
+    width: 44px;
+    height: 44px;
+    background: rgba(6, 18, 36, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    z-index: 20;
+  }
+  .lightbox-prev {
+    left: 0.65rem;
+  }
+  .lightbox-next {
+    right: 0.65rem;
+  }
+  .lightbox-close {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(6, 18, 36, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    z-index: 20;
   }
   .lightbox-img {
-    max-height: 60vh;
+    max-height: 65vh;
+    max-width: 94vw;
+  }
+  .lightbox-caption {
+    margin-top: 1rem;
+    padding: 0 1rem;
+  }
+  .lightbox-caption h3 {
+    font-size: 1.1rem;
   }
 }

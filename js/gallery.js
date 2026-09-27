@@ -21,6 +21,7 @@ function initGallerySystem() {
   const nextBtn = document.getElementById("pageNext");
   const paginationInfo = document.getElementById("paginationInfo");
   const galleryGrid = document.getElementById("galleryGrid");
+  const filterBar = document.querySelector(".gallery-filter-bar");
 
   if (!allItems.length) return;
 
@@ -48,7 +49,7 @@ function initGallerySystem() {
     const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
     const endIndex = startIndex + ITEMS_PER_PAGE;
 
-    // Display / Hide items based on filter and pagination
+    // Update visibility of items immediately
     allItems.forEach(item => {
       const itemIndexInFiltered = filteredItems.indexOf(item);
       const isVisibleOnCurrentPage = itemIndexInFiltered >= startIndex && itemIndexInFiltered < endIndex;
@@ -56,7 +57,6 @@ function initGallerySystem() {
       if (isVisibleOnCurrentPage) {
         item.style.display = "block";
         item.style.opacity = "1";
-        item.style.transform = "scale(1)";
       } else {
         item.style.display = "none";
         item.style.opacity = "0";
@@ -72,10 +72,8 @@ function initGallerySystem() {
     if (paginationWrapper) {
       if (totalItems <= ITEMS_PER_PAGE) {
         paginationWrapper.style.display = totalItems === 0 ? "none" : "flex";
-        if (totalItems <= ITEMS_PER_PAGE) {
-          const paginationBox = document.getElementById("galleryPagination");
-          if (paginationBox) paginationBox.style.display = totalPages > 1 ? "inline-flex" : "none";
-        }
+        const paginationBox = document.getElementById("galleryPagination");
+        if (paginationBox) paginationBox.style.display = totalPages > 1 ? "inline-flex" : "none";
       } else {
         paginationWrapper.style.display = "flex";
         const paginationBox = document.getElementById("galleryPagination");
@@ -96,13 +94,18 @@ function initGallerySystem() {
     // Render Page Number Buttons
     renderPaginationButtons(totalPages);
 
-    // Smooth scroll to top of grid when page is changed (not on initial load)
-    if (scrollToGrid && galleryGrid) {
-      const offsetTop = galleryGrid.getBoundingClientRect().top + window.scrollY - 100;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth"
-      });
+    // Smooth scroll to top of filter bar if user was scrolled down
+    if (scrollToGrid && (filterBar || galleryGrid)) {
+      const targetElement = filterBar || galleryGrid;
+      const headerOffset = 90;
+      const targetY = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      
+      if (window.pageYOffset > targetY + 40) {
+        window.scrollTo({
+          top: targetY,
+          behavior: "smooth"
+        });
+      }
     }
   }
 
@@ -296,4 +299,33 @@ function initGalleryLightbox(getFilteredItems) {
       showLightboxItem(currentIndex);
     }
   });
+
+  // Mobile Touch Swipe Gesture Support
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  overlay.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, { passive: true });
+
+  overlay.addEventListener("touchend", (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    const touchEndY = e.changedTouches[0].screenY;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    // Detect horizontal swipe if horizontal movement is greater than vertical
+    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 40) {
+      if (diffX > 0 && currentIndex > 0) {
+        // Swipe Right -> Previous
+        currentIndex--;
+        showLightboxItem(currentIndex);
+      } else if (diffX < 0 && currentIndex < currentItemsList.length - 1) {
+        // Swipe Left -> Next
+        currentIndex++;
+        showLightboxItem(currentIndex);
+      }
+    }
+  }, { passive: true });
 }
