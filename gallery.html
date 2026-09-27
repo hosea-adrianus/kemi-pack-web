@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Kemi Pack | Facility & Packaging Showcase</title>
+  <meta name="description" content="Explore Kemi Pack's state-of-the-art cleanroom facility, production lines, quality control laboratories, and premium primary packaging solutions for pharmaceutical, cosmetic, and food industries.">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo" aria-label="Kemi Pack Home">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="6" y="2" width="12" height="20" rx="3" />
+            <line x1="10" y1="2" x2="14" y2="2" />
+            <line x1="6" y1="8" x2="18" y2="8" />
+            <circle cx="12" cy="14" r="2" fill="currentColor" />
+          </svg>
+        </div>
+        <span>KEMI<span>PACK</span></span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About Us</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="gallery.html" class="nav-link active">Gallery</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 0.5rem; text-align: center;">Request a Quote (RFQ)</a>
+  </div>
+
+  <main>
+    <!-- Gallery Hero / Page Header -->
+    <section class="gallery-hero">
+      <div class="container">
+        <div class="gallery-hero-content">
+          <div class="section-subtitle">Our Visual Story</div>
+          <h1 class="section-title" style="font-size: clamp(2rem, 3.2vw, 2.75rem); margin-bottom: 0.75rem;">
+            Facility & Packaging Gallery
+          </h1>
+          <p class="section-desc" style="max-width: 600px;">
+            Explore our ISO-certified cleanroom facility, automated production lines, quality control laboratories, and the premium primary packaging solutions we deliver to pharmaceutical, cosmetic, and food industries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Filter Tabs -->
+    <section class="section" style="background: var(--color-white); border-top: 1px solid var(--slate-200); padding-top: 2.5rem;">
+      <div class="container">
+        <!-- Filter Pills -->
+        <div class="gallery-filter-bar">
+          <div class="filter-pills">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="facility">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01"/><path d="M9 12v.01"/><path d="M9 15v.01"/><path d="M9 18v.01"/></svg>
+              Facility & Operations
+            </button>
+            <button class="filter-btn" data-filter="product">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="3"/><line x1="6" y1="8" x2="18" y2="8"/></svg>
+              Product Showcase
+            </button>
+            <button class="filter-btn" data-filter="team">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Team & Culture
+            </button>
+          </div>
+          <div class="gallery-count" id="galleryCount">Showing 12 photos</div>
+        </div>
+
+        <!-- Clean Responsive Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+
+          <!-- 1. Cleanroom Facility (Facility) -->
+          <div class="gallery-item" data-category="facility" data-index="0">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/cleanroom.jpg" alt="Kemi Pack ISO Class 8 Cleanroom Facility with HEPA Filtration" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Facility</span>
+                  <h3>ISO Class 8 Cleanroom</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Amber Bottles (Product) -->
+          <div class="gallery-item" data-category="product" data-index="1">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/amber-bottles.jpg" alt="Amber Glass Pharmaceutical Bottles Collection — 1ml to 250ml" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Product</span>
+                  <h3>Amber Glass Bottles</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Quality Control (Facility) -->
+          <div class="gallery-item" data-category="facility" data-index="2">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/quality-control.jpg" alt="Kemi Pack Quality Control Laboratory — Vial Inspection Under Magnification" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Facility</span>
+                  <h3>QC Inspection Lab</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Caps & Closures (Product) -->
+          <div class="gallery-item" data-category="product" data-index="3">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/caps-closures.jpg" alt="Pharmaceutical and Cosmetic Caps, Flip-off Seals, and Droppers" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Product</span>
+                  <h3>Caps &amp; Precision Closures</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Automated Production Line (Facility) -->
+          <div class="gallery-item" data-category="facility" data-index="4">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/production-line.jpg" alt="Automated Pharmaceutical Vial Production Line with Robotic Inspection" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Facility</span>
+                  <h3>Automated Production</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Cosmetic Packaging (Product) -->
+          <div class="gallery-item" data-category="product" data-index="5">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/cosmetic-packaging.jpg" alt="Premium Cosmetic Packaging — Frosted Dropper Bottles, Airless Pumps, and Skincare Jars" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Product</span>
+                  <h3>Cosmetic Packaging</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Autoclave & Sterilization (Facility) -->
+          <div class="gallery-item" data-category="facility" data-index="6">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/autoclave-sterilization.jpg" alt="Pharmaceutical Pure Steam Sterilization Autoclave Facility" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Facility</span>
+                  <h3>Sterilization Chambers</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Glass Vials (Product) -->
+          <div class="gallery-item" data-category="product" data-index="7">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/glass-vials.jpg" alt="Pharmaceutical Glass Vials — Clear and Amber Injection Vials with Crimp Caps" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Product</span>
+                  <h3>Pharmaceutical Vials</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Team Engineering Review (Team) -->
+          <div class="gallery-item" data-category="team" data-index="8">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/team-meeting.jpg" alt="Kemi Pack Engineering Team — Collaborative Packaging Design Review" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Team</span>
+                  <h3>Engineering Review</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Food Packaging (Product) -->
+          <div class="gallery-item" data-category="product" data-index="9">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/food-packaging.jpg" alt="Premium Food & Beverage Glass Packaging — Bottles, Jars, and Containers" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Product</span>
+                  <h3>Food &amp; Beverage</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Logistics & Dispatch (Team) -->
+          <div class="gallery-item" data-category="team" data-index="10">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/logistics-dispatch.jpg" alt="Kemi Pack Logistics and Packaging Dispatch Team" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Team</span>
+                  <h3>Outbound Quality &amp; Dispatch</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. Distribution Warehouse (Facility) -->
+          <div class="gallery-item" data-category="facility" data-index="11">
+            <div class="gallery-item-inner">
+              <img src="assets/gallery/warehouse.jpg" alt="Kemi Pack Distribution Warehouse — Organized Pallet Storage and Logistics" loading="lazy">
+              <div class="gallery-overlay">
+                <div class="gallery-overlay-content">
+                  <span class="gallery-tag">Facility</span>
+                  <h3>Distribution Warehouse</h3>
+                </div>
+                <button class="gallery-zoom-btn" aria-label="View full size">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Gallery Pagination Controls -->
+        <div class="gallery-pagination-wrapper" id="galleryPaginationWrapper">
+          <div class="gallery-pagination" id="galleryPagination">
+            <button class="page-btn" id="pagePrev" aria-label="Previous page">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Prev</span>
+            </button>
+            <div class="page-numbers" id="pageNumbers"></div>
+            <button class="page-btn" id="pageNext" aria-label="Next page">
+              <span>Next</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+          <div class="pagination-info" id="paginationInfo">Showing 1–9 of 12 photos</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Impressed by What You See?</h2>
+          <p>
+            Schedule a virtual facility tour or request product samples delivered directly to your R&D lab for compatibility testing.
+          </p>
+          <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-accent btn-lg">Request Evaluation Samples</a>
+            <a href="https://wa.me/6281234567890?text=Hello%20Kemi%20Pack,%20we%20would%20like%20to%20schedule%20a%20facility%20tour" target="_blank" rel="noopener" class="btn btn-outline btn-lg" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); color: #fff;">Schedule Facility Tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-overlay" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+    <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+    <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="lightbox-nav lightbox-next" aria-label="Next image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 6 15 12 9 18"/></svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="" class="lightbox-img">
+      <div class="lightbox-caption">
+        <span class="lightbox-tag" id="lightboxTag"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/6281234567890?text=Hello%20Kemi%20Pack,%20we%20would%20like%20to%20inquire%20about%20primary%20packaging%20solutions" target="_blank" rel="noopener" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.47c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.71 4.3 3.8.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+    </svg>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand-logo" style="color: #ffffff; margin-bottom: 0.75rem;">
+            <div class="brand-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="2" width="12" height="20" rx="3" />
+                <line x1="10" y1="2" x2="14" y2="2" />
+                <line x1="6" y1="8" x2="18" y2="8" />
+                <circle cx="12" cy="14" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <span>KEMI<span style="color: #60a5fa;">PACK</span></span>
+          </a>
+          <p style="font-size: 0.85rem; line-height: 1.6; max-width: 280px; margin-top: 0.5rem;">
+            <strong>PT Kemilau Gema Indopack (KGI Group)</strong> — Reliable solutions partner of primary packaging for pharmaceutical, biotechnology, cosmetic, veterinary, food, and beverages. Part of Kinas Global Indonusa (Est. 2007).
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul class="footer-links">
+            <li><a href="products.html?category=pharma">Pharmaceutical</a></li>
+            <li><a href="products.html?category=biotech">Biotechnology</a></li>
+            <li><a href="products.html?category=cosmetic">Cosmetics &amp; Skincare</a></li>
+            <li><a href="products.html?category=vet">Veterinary Medicine</a></li>
+            <li><a href="products.html?category=food">Food &amp; Beverages</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Kemilau Gema Indopack</a></li>
+            <li><a href="about.html#standards">KGI Group Heritage (2007)</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html">Request Samples</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Facility &amp; Sales</h4>
+          <ul class="footer-links">
+            <li>Kawasan Pergudangan Lio Baru Asri Blok AA3 - AA5, Batuceper, Kota Tangerang, Indonesia</li>
+            <li><a href="mailto:sales@kemipack.com">sales@kemipack.com</a></li>
+            <li>+62 21 8900 1234</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 PT Kemilau Gema Indopack (KGI Group). All rights reserved.</div>
+        <div>Over 19 Years Raw Materials &amp; Primary Packaging Supplier</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
